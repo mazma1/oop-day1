@@ -1,7 +1,6 @@
 'use strict'; 
 
 // A QUIZ APP FOR STUDENTS
-
 class Student {
   constructor (studentName, studentEmail) {
     this.name = studentName;
@@ -30,9 +29,9 @@ class Question {
   
     getQuizDate () {
         let newDate = new Date();
-        const QUIZ_CREATED_DATE = newDate.toDateString();
+        const quizCreatedDate = newDate.toDateString();
         
-        return ("Quiz Created On: " + QUIZ_CREATED_DATE);
+        return ("Quiz Created On: " + quizCreatedDate);
     }
   
     displayQuestion () {
@@ -45,5 +44,26 @@ class Question {
             
         });
     }
-  
 }
+
+// Sub Class
+class MultiChoiceQuestion extends Question {
+  constructor(theQuestion, theOptions, theCorrectAnswer) {
+    super (theQuestion, theOptions, theCorrectAnswer);
+  }
+  
+  getCorrectAnswer() {
+    return  this.correctAnswer;
+  }
+  
+  takeQuiz() {
+    let question = this.displayQuestion();
+    let studentAnswer = prompt(question);
+    if (studentAnswer  == this.correctAnswer) {
+      return "Correct Answer!";
+    }
+    else {
+      return "Wrong answer, try harder next time."
+    }
+  }
+} 
