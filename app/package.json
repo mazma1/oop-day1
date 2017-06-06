@@ -1,0 +1,19 @@
+{
+  "name": "oop-app",
+  "version": "1.0.0",
+  "description": "A real-world problem modelled using OOP concepts",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mazma1/oop-day1.git"
+  },
+  "author": "Mary Mazi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mazma1/oop-day1/issues"
+  },
+  "homepage": "https://github.com/mazma1/oop-day1#readme"
+}
